@@ -1,0 +1,18 @@
+<ion-view style="" class=" " id="page3" title="Upload Pokemon Locations">
+    <ion-content class="has-header" padding="true">
+        <h1 class=" " style="color: rgb(0, 0, 0);" id="uploadPokemonLocations-heading2">Auto-Upload</h1>
+        <button class=" button button-positive  button-block " id="uploadPokemonLocations-button3">Upload Mini-map</button>
+        <h1 class=" " style="color: rgb(0, 0, 0);" id="uploadPokemonLocations-heading1">Manual Upload</h1>
+        <form class="list " id="uploadPokemonLocations-form1">
+            <label name="pokemonName" id="uploadPokemonLocations-input1" class="item item-input ">
+                <span class="input-label">Pokemon Name</span>
+                <input placeholder="Abra" type="text" ng-model="model.pokeName">
+            </label>
+            <button class=" button button-positive  button-block " id="uploadPokemonLocations-button1" ng-click="getLocation()">Refresh Location</button>
+			<label>Lat: {{currentLocationLat}}, Long: {{currentLocationLong}}, Pokemon: {{model.pokeName}}</label>
+		</form>
+        <div style="margin: 0px; line-height: 250px; background-color: rgb(232, 235, 239); text-align: center;"><img src={{mapUrl}}>
+        </div>
+        <button class=" button button-positive  button-block " id="uploadPokemonLocations-button2" ng-click="sendToServer()"> Upload Pokemon Location</button>
+    </ion-content>
+</ion-view>
